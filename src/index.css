@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #FFF8FA;
+    color: #4A3B43;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+/* Custom delicate scrapbook paper pattern */
+.scrapbook-paper {
+  background-color: #FFFDFE;
+  background-image: radial-gradient(#FBCFE8 0.6px, transparent 0.6px), radial-gradient(#FDE2E4 0.6px, #FFFDFE 0.6px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.scrapbook-lined {
+  background-image: repeating-linear-gradient(transparent, transparent 27px, #FCE7F3 28px);
+  line-height: 28px;
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF1F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #FBCFE8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F472B6;
+}
+
+/* Subtle delicate shadow */
+.shadow-coquette {
+  box-shadow: 0 8px 24px -4px rgba(244, 114, 182, 0.12), 0 2px 8px -2px rgba(251, 207, 232, 0.2);
+}
+
+.shadow-coquette-hover {
+  box-shadow: 0 14px 30px -4px rgba(244, 114, 182, 0.2), 0 4px 12px -2px rgba(251, 207, 232, 0.28);
+}
+
+@keyframes bowFloat {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -40%) scale(0.6);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translate(-50%, -60%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -75%) scale(0.85);
+  }
+}
+
+.animate-bow-float {
+  animation: bowFloat 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
